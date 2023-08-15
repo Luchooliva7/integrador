@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(27deg, #0a5281 50%, #b1b1b0 50%);
+  background-image: url(./img/scc-2.jpg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-body {
+  width: 400px;
+  min-width: 300px;
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin: 10px;
+  border: solid 1px blue;
+  background: rgb(141, 139, 139);
+}
+
+.form-body img {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aliceblue;
+  margin-bottom: 25px;
+}
+
+.form-body input {
+  display: block;
+  margin: auto;
+  height: 40px;
+  width: 75%;
+  padding-left: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+.form-body input[type="password"] {
+  margin-top: 20px;
+}
+
+::placeholder {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.596);
+}
+
+.form-body input:hover {
+  transition: 0.5s;
+  border: 1px solid rgb(241, 237, 237);
+  color: rgb(228, 225, 225);
+}
+
+.form-body button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 78%;
+  background: rgb(30, 30, 182);
+  color: whitesmoke;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.form-body button:hover {
+  color: rgb(228, 223, 223);
+  border: 2px solid rgb(54, 54, 143);
+  background: linear-gradient(grey rgb(95, 94, 94));
+}
+
+.registro {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.registro a {
+  color: rgb(106, 19, 221);
+}
+
+.form-body p {
+  color: white;
+}
+
+.form-body {
+  background-color: rgba(141, 139, 139, 0.7);
+}
+
+.text {
+  color: #fff;
+}
+
+.form-body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el formulario */
+.login-form {
+  margin-top: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registro {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 769px) {
+  .form-body {
+    max-width: 400px;
+  }
+}
