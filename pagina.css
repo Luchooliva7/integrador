@@ -287,3 +287,158 @@ footer {
   margin-right: 5px;
   vertical-align: middle;
 }
+
+@media screen and (max-width: 768px) {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card p.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info,
+.location-info,
+.instagram-info {
+  text-align: center;
+  margin: 10px;
+}
+
+.footer-container i {
+  font-size: 24px;
+}
+
+.footer-container h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.instagram-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.instagram-info i {
+  margin-right: 5px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.card {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
