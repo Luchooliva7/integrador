@@ -290,7 +290,7 @@ footer {
 
 .card {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -309,4 +309,6 @@ footer {
     margin-bottom: 20px;
     box-sizing: border-box;
   }
+
+  /* ... (otros estilos) ... */
 }
