@@ -287,3 +287,26 @@ footer {
   margin-right: 5px;
   vertical-align: middle;
 }
+
+.card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* ... (otros estilos) ... */
+
+@media screen and (min-width: 768px) {
+  /* Estilos para pantallas de tamaño medio a grande */
+
+  /* Restaurar el ancho original de las tarjetas */
+  .card {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+}
