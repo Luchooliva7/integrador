@@ -298,9 +298,6 @@ footer {
 /* ... (otros estilos) ... */
 
 @media screen and (min-width: 768px) {
-  /* Estilos para pantallas de tamaño medio a grande */
-
-  /* Restaurar el ancho original de las tarjetas */
   .card {
     width: calc(33.33% - 20px);
     padding: 20px;
@@ -309,6 +306,95 @@ footer {
     margin-bottom: 20px;
     box-sizing: border-box;
   }
+}
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
 
-  /* ... (otros estilos) ... */
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #0a0a0a;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Estilos para el icono del menú hamburguesa cuando está abierto */
+.menu-open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.nav-links {
+  list-style: none;
+  display: none; /* Oculta el menú por defecto */
+}
+
+.menu-open .nav-links {
+  display: flex; /* Muestra el menú cuando el menú hamburguesa está abierto */
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 100px; /* Ajusta esta posición según tus necesidades */
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #0a0a0a;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.menu-open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+.nav-links {
+  list-style: none;
+  display: none;
+}
+
+.menu-open .nav-links {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.menu-open .nav-links li {
+  margin-bottom: 10px;
 }
