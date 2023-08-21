@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  /* Adjust your styles here */
+  .hero-text h1 {
+    font-size: 24px;
+  }
+  /* Add more responsive styling as needed */
+}
