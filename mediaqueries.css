@@ -1,9 +1,25 @@
 @media screen and (max-width: 768px) {
-  /* Mostrar el menú hamburguesa */
+  .nav-links {
+    display: none; /* Oculta las opciones de navegación para pantallas pequeñas */
+  }
+
+  .nav-links-mobile {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: none; /* Oculta el menú hamburguesa por defecto */
+  }
+
   .menu-icon {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1000;
   }
 
   .bar {
@@ -14,27 +30,26 @@
     transition: 0.4s;
   }
 
-  /* Mostrar el menú cuando se hace clic en el icono */
-  .menu-open .nav-links {
+  .menu-open .nav-links-mobile {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    z-index: 1000;
+  }
+
+  .menu-open .bar:nth-child(1) {
+    transform: translateY(6px) rotate(-45deg);
+  }
+
+  .menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(45deg);
   }
 }
 
-/* Estilos para dispositivos de pantalla más grande */
 @media screen and (min-width: 769px) {
-  /* Ocultar el menú hamburguesa y mostrar las opciones de navegación */
-  .menu-icon {
-    display: none;
-  }
-
+  /* Modifica estilos según las necesidades de diseño para pantallas más grandes */
   .navbar-container {
     justify-content: space-between;
   }
@@ -43,7 +58,5 @@
     display: flex;
   }
 
-  .nav-links li {
-    margin-right: 2rem;
-  }
+  /* Agrega más estilos aquí según lo necesites */
 }

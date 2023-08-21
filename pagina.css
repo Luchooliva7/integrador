@@ -289,13 +289,13 @@ footer {
 }
 
 .beneficios:hover {
-  background-color: #f0d394; /* Cambia el color de fondo al pasar el mouse */
-  transition: background-color 0.3s; /* Agrega una transición suave */
-  transition: transform 0.3s, background-color 0.3s; /* Transiciones suaves */
-  transform-origin: center; /* Punto de origen de la transformación */
+  background-color: #f0d394; 
+  transition: background-color 0.3s; 
+  transition: transform 0.3s, background-color 0.3s;
+  transform-origin: center; 
 }
 .beneficios:hover {
-  transform: scale(1.05); /* Agranda el elemento al pasar el mouse */
-  background-color: #e0cda8; /* Cambia el color de fondo al pasar el mouse */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+  transform: scale(1.05);
+  background-color: #e0cda8; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
 }
