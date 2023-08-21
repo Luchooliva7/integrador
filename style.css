@@ -22,8 +22,8 @@ body {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   margin: 10px;
-  border: solid 1px blue;
-  background: rgb(141, 139, 139);
+
+  background: rgb(236, 169, 137);
 }
 
 .form-body img {
@@ -121,7 +121,6 @@ body {
   padding: 20px;
 }
 
-/* Estilos para el formulario */
 .login-form {
   margin-top: 20px;
 }

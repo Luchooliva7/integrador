@@ -1,27 +1,27 @@
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    overflow-x: hidden;
   }
 
   .hero-image {
-    margin-left: -10%; /* Empujar el contenido hacia la derecha */
-    width: 120%; /* Aumentar el ancho para asegurar que todo esté visible */
+    margin-left: -10%;
+    width: 120%;
   }
 
   .hero-text {
-    left: 10%; /* Centrar el texto */
-    right: 10%; /* Asegurar que el texto no se extienda más allá del ancho */
+    left: 10%;
+    right: 10%;
   }
 
   .cards-container {
-    padding: 20px 10px; /* Ajustar el espaciado horizontal */
-  }
+    padding: 20px 10px;
 
-  .beneficios-container {
-    padding: 20px 10px; /* Ajustar el espaciado horizontal */
-  }
+    .beneficios-container {
+      padding: 20px 10px;
+    }
 
-  .logo-frase-container {
-    padding: 20px 10px; /* Ajustar el espaciado horizontal */
+    .logo-frase-container {
+      padding: 20px 10px;
+    }
   }
 }
