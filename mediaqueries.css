@@ -1,6 +1,27 @@
-@media (max-width: 480px) {
-  /* Adjust your styles here */
-  .hero-text h1 {
-    font-size: 20px;
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+  }
+
+  .hero-image {
+    margin-left: -10%; /* Empujar el contenido hacia la derecha */
+    width: 120%; /* Aumentar el ancho para asegurar que todo esté visible */
+  }
+
+  .hero-text {
+    left: 10%; /* Centrar el texto */
+    right: 10%; /* Asegurar que el texto no se extienda más allá del ancho */
+  }
+
+  .cards-container {
+    padding: 20px 10px; /* Ajustar el espaciado horizontal */
+  }
+
+  .beneficios-container {
+    padding: 20px 10px; /* Ajustar el espaciado horizontal */
+  }
+
+  .logo-frase-container {
+    padding: 20px 10px; /* Ajustar el espaciado horizontal */
   }
 }
