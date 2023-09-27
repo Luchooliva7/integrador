@@ -1,22 +1,82 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-size: cover;
-  background-position: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
-nav {
-  background-color: transparent;
+/* Estilos para el encabezado (header) */
+header {
+  background-color: #000;
   color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .hamburger-menu .bar {
+    transition: 0.4s;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: transparent;
+  padding: 0 2rem;
 }
 
 .logo img {
@@ -33,31 +93,23 @@ nav {
 }
 
 .nav-links a {
-  color: #0a0a0a;
+  color: #fff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: rgb(52, 206, 245);
+  color: #34cef5;
 }
 
-.cart-icon i {
-  font-size: 1.2rem;
-}
-
-.cart-icon:hover i {
-  color: #f00;
-}
-
+/* Estilos para el héroe (hero section) */
 .hero-image {
   background-image: url("./img/body.webp");
   background-size: cover;
   background-position: center;
   height: 600px;
-  width: 110%;
-  margin-left: -5%;
   position: relative;
   margin-bottom: 50px;
 }
@@ -68,30 +120,43 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(10, 10, 10);
-  background-color: rgba(255, 255, 255, 0.699);
-  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 .hero-text button {
   background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
+  color: #fff;
+  padding: 15px 30px;
   border: none;
   border-radius: 4px;
+  font-size: 18px;
   cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
 }
 
 .hero-text button:hover {
   background-color: #45a049;
 }
 
-.content {
-  min-height: calc(100vh - 200px);
-  padding: 20px;
-}
-
+/* Estilos para la sección de productos (cards-container) */
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -102,33 +167,19 @@ nav {
   padding: 20px;
 }
 
-.cards-container h2 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 5px;
-  color: #1a4210;
-}
-
 .card {
-  width: 30%;
-  background-color: #f9f9f9;
+  width: calc(33.33% - 20px);
+  background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.1);
-  background-color: #000;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.card:hover h2,
-.card:hover p {
-  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -140,28 +191,32 @@ nav {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: white;
+  color: #333;
 }
 
 .card p {
   font-size: 1rem;
-  color: #ffffff;
-}
-.card {
-  background-color: rgb(0, 0, 0);
+  color: #777;
 }
 
+.card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34cef5;
+}
+
+/* Estilos para la sección de promoción (promo-text) */
 .promo-text {
   text-align: center;
   justify-content: center;
   padding: 20px;
-  background: rgb(255, 253, 253);
+  background: #f9f9f9;
   margin: 0 auto;
 }
 
 .promo-text p {
   font-size: 1.2rem;
-  color: #020202;
+  color: #333;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -178,12 +233,14 @@ nav {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .promo-text button.boton-tienda:hover {
   background-color: #45a049;
 }
 
+/* Estilos para la sección de beneficios (beneficios-container) */
 .beneficios-container {
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +252,7 @@ nav {
 
 .beneficios {
   width: 45%;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -212,11 +269,12 @@ nav {
 .beneficios h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .beneficios p {
   font-size: 1rem;
-  color: #333;
+  color: #777;
 }
 
 .beneficios img {
@@ -228,30 +286,9 @@ nav {
   border-radius: 50%;
 }
 
-.logo-frase-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  width: 100%;
-  background-color: #f9f0e7;
-}
-
-.logo-frase-container img {
-  height: 150px;
-  margin-right: 20px;
-}
-
-.logo-frase-container p {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
-  font-family: cursive;
-}
-
+/* Estilos para el pie de página (footer) */
 footer {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -267,35 +304,21 @@ footer {
 .footer-container h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .footer-container p {
   font-size: 1rem;
   margin: 5px 0;
+  color: #bbb;
 }
 
 .footer-container a {
-  color: #fff;
+  color: #34cef5;
   text-decoration: none;
 }
 
 .footer-container a:hover {
   text-decoration: underline;
-}
-.footer-container i {
-  font-size: 24px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.beneficios:hover {
-  background-color: #f0d394; 
-  transition: background-color 0.3s; 
-  transition: transform 0.3s, background-color 0.3s;
-  transform-origin: center; 
-}
-.beneficios:hover {
-  transform: scale(1.05);
-  background-color: #e0cda8; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
+  color: #45a049;
 }
